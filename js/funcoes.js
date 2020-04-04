@@ -1,0 +1,3 @@
+function limparCamposModais(){
+	$('input').val('');
+}

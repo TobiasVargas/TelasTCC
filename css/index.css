@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+
+body{
+	background-color: #E3F1FC;
+}
+
+.bg-color-padrao{
+	background-color: #E3F1FC;
+}
+
+input{
+	background-color: #E3F1FC;
+}
+
+.center-align{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%) ;
+}
+
+.font-titulo{
+	font-family: 'Prompt', sans-serif;
+	font-size: 20pt;
+	color: white;
+	text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+#div-cadastro{
+	/*background-color: #335885;
+	background-image: linear-gradient(#335885, )*/
+	background-image: linear-gradient(to right top, #335885, #3b6599, #4373ad, #4b81c1, #538fd6);
+	height: 100vh;
+	display: block;
+	padding-top: 35%;
+	padding-bottom: 35%;
+}
+
+#div-pai-botoes-cadastro{
+	height: auto;
+	/*width: 30%;*/
+}
+
+.btn-login-cadastro{
+	color: black;
+	background-color: white;
+	font-weight: bold;
+}
+
+#menu-home{
+	background-image: linear-gradient(to right top, #335885, #3b6599, #4373ad, #4b81c1, #538fd6);
+	text-shadow: 0.1em 0.1em 0.2em black;
+}

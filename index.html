@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>CROWD</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Prompt:ital@1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container-fluid" style="padding-left: 0px !important;">
+		<div class="row">
+			<div class="col-sm-12 col-md-4">
+				<div id="div-cadastro" class="text-center">
+					<p class="font-titulo">
+						Entre para o ambiente crowdsourcing de testes funcionais!
+					</p>
+					<div id="div-pai-botoes-cadastro">
+						<div class="div-botoes-cadastro text-center pt-2 mt-2 mr-4 ml-4">
+							<a class="btn btn-block border btn-login-cadastro" data-toggle="modal" data-target="#modal-login" onclick="limparCamposModais()">
+								Já estou cadastrado
+							</a>
+						</div>
+						<div class="div-botoes-cadastro text-center pt-2 mt-2 mr-4 ml-4">
+							<a class="btn btn-block border btn-login-cadastro" data-toggle="modal" data-target="#modal-cadastro-tester" onclick="limparCamposModais()">
+								Quero Testar
+							</a>
+						</div>
+						<div class="div-botoes-cadastro text-center pt-2 mt-2 mr-4 ml-4">
+							<a class="btn btn-block border btn-login-cadastro" data-toggle="modal" data-target="#modal-cadastro-desenvolvedor" onclick="limparCamposModais()">
+								Preciso de Testes
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-0" style="background-image: url('img/agr.png');
+												  background-repeat: no-repeat;
+												  background-size: auto;
+												  background-position: center;
+			">
+				<p>
+					
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modais -->
+
+<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-loginTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable modal-md modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-color-padrao">
+				<h5 class="modal-title" id="modal-loginTitle">Login</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body bg-color-padrao">
+				<div id="div-modal-login" class="">
+					<form id="form-login" method="POST">
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<label class="sr-only" for="usuario">Email</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<div class="input-group-text">
+												<i class="fas fa-at"></i>
+											</div>
+										</div>
+										<input type="email" class="form-control" id="usuario" name="usuario" placeholder="Email">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<label class="sr-only" for="senha">Senha</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<div class="input-group-text">
+												<i class="fas fa-key"></i>
+											</div>
+										</div>
+										<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row text-center">
+							<div class="col-sm-12 col-md-8 offset-md-2">
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<button class="btn btn-danger btn-block" data-dismiss="modal">Cancelar</button>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<button type="submit" class="btn btn-primary btn-block">Entrar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<div class="modal fade" id="modal-cadastro-tester" tabindex="-1" role="dialog" aria-labelledby="modal-cadastro-testerTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable modal-md modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-color-padrao">
+				<h5 class="modal-title" id="modal-cadastro-testerTitle">Cadastro como Tester</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body bg-color-padrao">
+				<div id="div-modal-cadastro-tester" class="">
+					<form id="form-cadastro-tester" method="POST">
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="first-name" name="first_name" placeholder="Nome">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="last-name" name="last_name" placeholder="Sobrenome">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="password" class="form-control" id="confirm-senha" name="confirm_senha" placeholder="Confirme a Senha">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="checkbox" name="termo" id="checkbox-termo-tester">&nbsp;Sou tester e concordo com os <a href="#">termos de contrato</a>.
+								</div>
+							</div>
+						</div>
+						<div class="row text-center">
+							<div class="col-sm-12 col-md-8 offset-md-2">
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<button class="btn btn-danger btn-block" data-dismiss="modal">Cancelar</button>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<button type="submit" class="btn btn-primary btn-block" id="btn-submit-cadastro-tester">Cadastrar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<div class="modal fade" id="modal-cadastro-desenvolvedor" tabindex="-1" role="dialog" aria-labelledby="modal-cadastro-desenvolvedorTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable modal-md modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-color-padrao">
+				<h5 class="modal-title" id="modal-cadastro-desenvolvedorTitle">Cadastro como Desenvolvedor</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body bg-color-padrao">
+				<div id="div-modal-cadastro-desenvolvedor" class="">
+					<form id="form-cadastro-desenvolvedor" method="POST">
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="first-name" name="first_name" placeholder="Nome">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="last-name" name="last_name" placeholder="Sobrenome">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="password" class="form-control" id="confirm-senha" name="confirm_senha" placeholder="Confirme a Senha">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<input type="checkbox" name="termo">&nbsp;Sou desenvolvedor e concordo com os <a href="#">termos de contrato</a>.
+								</div>
+							</div>
+						</div>
+						<div class="row text-center">
+							<div class="col-sm-12 col-md-8 offset-md-2">
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<button class="btn btn-danger btn-block" data-dismiss="modal">Cancelar</button>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/funcoes_carregamento_automatico.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>
+</body>
+</html>
