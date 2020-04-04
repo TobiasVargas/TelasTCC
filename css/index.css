@@ -12,6 +12,13 @@ body{
 	background-color: #E3F1FC;
 }
 
+#div-imagem-lateral{
+	background-image: url('img/agr.png');
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+}
+
 input{
 	background-color: #E3F1FC;
 }
