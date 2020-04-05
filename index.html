@@ -23,17 +23,17 @@
 						Entre para o ambiente crowdsourcing de testes funcionais!
 					</p>
 					<div id="div-pai-botoes-cadastro">
-						<div class="div-botoes-cadastro text-center pt-2 mt-2 mr-4 ml-4">
+						<div class="div-botoes-cadastro text-center pt-2 mt-2 mr-2 ml-2">
 							<a class="btn btn-block border btn-login-cadastro" data-toggle="modal" data-target="#modal-login" onclick="limparCamposModais()">
 								Já estou cadastrado
 							</a>
 						</div>
-						<div class="div-botoes-cadastro text-center pt-2 mt-2 mr-4 ml-4">
+						<div class="div-botoes-cadastro text-center pt-2 mt-2 mr-2 ml-2">
 							<a class="btn btn-block border btn-login-cadastro" data-toggle="modal" data-target="#modal-cadastro-tester" onclick="limparCamposModais()">
 								Quero Testar
 							</a>
 						</div>
-						<div class="div-botoes-cadastro text-center pt-2 mt-2 mr-4 ml-4">
+						<div class="div-botoes-cadastro text-center pt-2 mt-2 mr-2 ml-2">
 							<a class="btn btn-block border btn-login-cadastro" data-toggle="modal" data-target="#modal-cadastro-desenvolvedor" onclick="limparCamposModais()">
 								Preciso de Testes
 							</a>
@@ -42,84 +42,80 @@
 				</div>
 			</div>
 			<div class="col-md-8 col-sm-0" id="div-imagem-lateral" style="
-																		background-image: url('img/agr.png');
-																		background-repeat: no-repeat;
-																		background-size: auto;
-																		background-position: center;
-																		">
-			<p>
-
-			</p>
+			background-image: url('img/agr.png');
+			background-repeat: no-repeat;
+			background-size: auto;
+			background-position: center;
+			">
 		</div>
 	</div>
-</div>
 
 
 
-<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-loginTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-scrollable modal-md modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header bg-color-padrao">
-				<h5 class="modal-title" id="modal-loginTitle">Login</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body bg-color-padrao">
-				<div id="div-modal-login" class="">
-					<form id="form-login" method="POST">
-						<div class="row">
-							<div class="col-sm-12 col-md-12">
-								<div class="form-group">
-									<label class="sr-only" for="usuario">Email</label>
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<div class="input-group-text">
-												<i class="fas fa-at"></i>
+	<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-loginTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable modal-md modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-color-padrao">
+					<h5 class="modal-title" id="modal-loginTitle">Login</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body bg-color-padrao">
+					<div id="div-modal-login" class="">
+						<form id="form-login" method="POST">
+							<div class="row">
+								<div class="col-sm-12 col-md-12">
+									<div class="form-group">
+										<label class="sr-only" for="usuario">Email</label>
+										<div class="input-group">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+													<i class="fas fa-at"></i>
+												</div>
+											</div>
+											<input type="email" class="form-control" id="usuario" name="usuario" placeholder="Email">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 col-md-12">
+									<div class="form-group">
+										<label class="sr-only" for="senha">Senha</label>
+										<div class="input-group">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+													<i class="fas fa-key"></i>
+												</div>
+											</div>
+											<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row text-center">
+								<div class="col-sm-12 col-md-8 offset-md-2">
+									<div class="row">
+										<div class="col-6">
+											<div class="form-group">
+												<button class="btn btn-danger btn-block" data-dismiss="modal">Cancelar</button>
 											</div>
 										</div>
-										<input type="email" class="form-control" id="usuario" name="usuario" placeholder="Email">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12 col-md-12">
-								<div class="form-group">
-									<label class="sr-only" for="senha">Senha</label>
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<div class="input-group-text">
-												<i class="fas fa-key"></i>
+										<div class="col-6">
+											<div class="form-group">
+												<button type="submit" class="btn btn-primary btn-block">Entrar</button>
 											</div>
 										</div>
-										<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="row text-center">
-							<div class="col-sm-12 col-md-8 offset-md-2">
-								<div class="row">
-									<div class="col-6">
-										<div class="form-group">
-											<button class="btn btn-danger btn-block" data-dismiss="modal">Cancelar</button>
-										</div>
-									</div>
-									<div class="col-6">
-										<div class="form-group">
-											<button type="submit" class="btn btn-primary btn-block">Entrar</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>	
+	</div>	
 </div>
 
 <div class="modal fade" id="modal-cadastro-tester" tabindex="-1" role="dialog" aria-labelledby="modal-cadastro-testerTitle" aria-hidden="true">
